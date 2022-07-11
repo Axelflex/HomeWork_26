@@ -1,9 +1,15 @@
 package com.company;
 
 public class Keys {
-    String key;
-    String value;
+    private String key;
+    private String value;
 
+    public String getKey(){
+        return key;
+    }
+    public String getValue(){
+        return value;
+    }
     public void printKey(){
         System.out.println(key);
     }
@@ -15,5 +21,12 @@ public class Keys {
     }
     public void writeDownValue(String value){
         this.value = value;
+    }
+    @Override
+    public String toString() {
+        return "Keys {" +
+                "key = '" + key + '\'' +
+                ", value = '" + value + '\'' +
+                '}';
     }
 }
